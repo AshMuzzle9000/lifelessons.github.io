@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Ashraf Musleh | Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="projects.css">
+  <link rel="stylesheet" type="text/css" href="styleLinkedIn.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo"><img src="Pictures/LLlogo.png" alt="Life Lessons Logo" width="100" height="100"></a>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#sec">About</a></li>
+      <li><a href="#projects">Teaser</a></li>
+      <div class="linkedIn">
+        <a href="https://twitter.com/rickroll?lang=en" target="_blank"><button><img src=Pictures/twitter2.png alt="LinkedIn"></button></a>
+      </div>
+    </ul>
+  </header>
+  <section>
+    <img src="Pictures/SandStars.png" id="stars"> <!--Stars-->
+    <img src="Pictures/sandMoon.png" id="moon"> <!--Moon-->
+    <img src="Pictures/SandBehind.png" id="mountains_behind"> <!--Behind-->
+    <h2 id="text">LIFE LESSONS</h2>
+    <div class="countdown">
+      <h2>Countdown till' Release</h2>
+      <div class="timer">
+        <span class="hours">00</span> :
+        <span class="minutes">00</span> :
+        <span class="seconds">00</span>
+      </div>
+    </div>
+    
+    <img src="Pictures/SandFront.png" id="mountains_front"> <!--Front-->
+  </section>
+  <div class="sec" id="sec">
+    <h2>About Us</h2>
+    <p>
+      Welcome to Life Lessons, a website where people share their wisdom and life experiences with others. Our community is made up of individuals from all walks of life who have learned valuable lessons from their personal experiences, and are passionate about helping others learn from their own experiences as well.
+      <p>
+      We believe that every person has something to teach and something to learn. By sharing our stories, we can inspire and encourage others to overcome their own challenges, and learn from the experiences of others. We are committed to creating a safe and supportive space for people to connect, learn, and grow together.
+      <p>
+      At Life Lessons, we believe that personal growth is a lifelong journey, and that every experience is an opportunity for growth and learning. Whether you are facing a difficult situation, or simply looking for inspiration, our website is here to provide you with the guidance and support you need.
+      <p>
+      Thank you for being a part of our community, and for sharing your life lessons with others. Together, we can make a difference in the world, one lesson at a time.</p></p></p></p><br><br>
+
+  
+
+    </p>
+  </div>
+
+  <script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function () {
+      let value = window.scrollY;
+      stars.style.left = value * .3 + 'px';
+      moon.style.top = value * 1.7 + 'px';
+      mountains_behind.style.top = value * .5 + 'px';
+      mountains_front.style.top = value * 0 + 'px';
+      text.style.marginRight = value * 4 + 'px';
+      text.style.marginTop = value * .8 + 'px';
+      btn.style.marginTop = value * .3 + 'px';
+      header.style.top = value * .8 + 'px';
+    })
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const projects = document.querySelectorAll('.slide-in');
+
+    function checkSlide() {
+      projects.forEach(project => {
+        const slideInAt = window.scrollY + window.innerHeight - project.offsetHeight / 2;
+        const projectBottom = project.offsetTop + project.offsetHeight;
+
+        if (slideInAt > project.offsetTop && window.scrollY < projectBottom) {
+          project.classList.add('visible');
+        } else {
+          project.classList.remove('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkSlide);
+  });
+</script>
+
+  
+
+  <div class="projects" id="projects">
+
+    <video controls>
+      <source src="Pictures/Life Lessons Video Assignment.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+  
+
+</body>
+
+</html>

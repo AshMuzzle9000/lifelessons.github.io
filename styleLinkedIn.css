@@ -1,0 +1,31 @@
+*
+.linkedIn {
+  text-align: right;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.linkedIn:hover {
+
+  transform: translateY(-5px);
+}
+
+.linkedIn a{
+  text-decoration:none
+ } 
+
+ .linkedIn img {
+  width: 35px;
+  height: 35px;
+}
+
+.myName {
+  float: left;
+  text-align: left;
+  padding: 20px;
+}
+
+.myName h1 {
+  margin: 0;
+}
+

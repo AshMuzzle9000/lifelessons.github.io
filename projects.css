@@ -1,0 +1,22 @@
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  display: block;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.projects:hover video {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
